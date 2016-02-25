@@ -1,0 +1,26 @@
+{
+  "name": "standard-project-structure",
+  "version": "1.0.0",
+  "description": "Open Standard for Programming Project Structures",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcorp/standard-project-structure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcorp/standard-project-structure/issues"
+  },
+  "homepage": "https://github.com/rcorp/standard-project-structure#readme",
+  "dependencies": {
+    "eslint-config-airbnb": "^6.0.2"
+  }
+}
