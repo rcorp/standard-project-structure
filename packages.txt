@@ -1,0 +1,6 @@
+linter-eslint
+linter-coffeelint
+linter-csslint
+linter-htmlhint
+atom-typescript
+editorconfig
