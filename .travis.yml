@@ -4,8 +4,8 @@ node_js:
     - "0.12"
     - "4"
     - "5"
- before_install:
- - npm install -g npm
- - npm install eslint-config-airbnb eslint-plugin-react eslint
- script:
- - "npm run lint"
+before_install:
+	- npm install -g npm
+	- npm install eslint-config-airbnb eslint-plugin-react eslint
+script:
+	- "npm run lint"
