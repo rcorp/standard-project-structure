@@ -8,4 +8,4 @@ node_js:
  - npm install -g npm
  - npm install eslint-config-airbnb eslint-plugin-react eslint
  script:
-  - eslint . --ext .js
+ - "npm run lint"
