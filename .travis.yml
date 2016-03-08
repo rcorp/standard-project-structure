@@ -1,9 +1,9 @@
 sudo: false
 language: node_js
 node_js:
-    - "0.12"
-    - "4"
-    - "5"
+	- "0.12"
+	- "4"
+	- "5"
 before_install:
 	- npm install -g npm
 	- npm install eslint-config-airbnb eslint-plugin-react eslint
