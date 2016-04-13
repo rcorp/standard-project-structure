@@ -22,12 +22,13 @@
   },
   "homepage": "https://github.com/rcorp/standard-project-structure#readme",
   "dependencies": {
-    "eslint-config-airbnb": "^6.0.2"
-  },
-  "devDependencies": {
+    "eslint-config-airbnb": "^6.0.2",
     "eslint": "^2.2.0",
     "eslint-plugin-react": "^4.1.0",
     "stylelint": "^5.0.1",
     "stylelint-config-standard": "^3.0.0"
+  },
+  "devDependencies": {
+    
   }
 }
