@@ -23,6 +23,7 @@
   "homepage": "https://github.com/rcorp/standard-project-structure#readme",
   "dependencies": {
     "eslint-config-airbnb": "^6.0.2",
+    "tslint": "^3.7.4",
     "eslint": "^2.2.0",
     "eslint-plugin-react": "^4.1.0",
     "stylelint": "^5.0.1",
