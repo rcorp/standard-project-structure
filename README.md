@@ -46,7 +46,7 @@ Open Standard for Programming Project Structures
 <td>Typescript</td>
 <td> <a href="https://github.com/palantir/tslint"> TSLint </a> </td>
 <td> <a href="https://github.com/Microsoft/tslint-microsoft-contrib/blob/master/tslint.json"> TSLint </a> </td>
-<td> <a "https://github.com/rcorp/standard-project-structure/issues/15"> #4 </a> </td>
+<td> <a href="https://github.com/rcorp/standard-project-structure/issues/15"> #4 </a> </td>
 </tr>
 </table>
 
