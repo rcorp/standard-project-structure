@@ -1,9 +1,6 @@
 # standard-project-structure
 Open Standard for Programming Project Structures
 
-# standard-project-structure
-Open Standard for Programming Project Structures
-
 ## Modules
 
 1. [Linting] (#linting) 
@@ -19,13 +16,13 @@ Open Standard for Programming Project Structures
 <table>
 <tr>
 <td><b>Language</td>
-<td><b> Linter Node</td><td><b>Why?</td><td><b>Rules</td>
+<td><b> Linter Node</td><td><b>Rules</td><td><b>Why?</td>
 </tr>
 <tr>
 <td>Javascript</td>
 <td> <a href="https://github.com/eslint/eslint/"> ESLint </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/6"> #6 </a> </td>
-<td> https://github.com/airbnb/javascript </td>
+<td> <a href="https://github.com/airbnb/javascript"> JS Style </a> </td>
+<td> <a href="https://github.com/rcorp/standard-project-structure/issues/6"> #4 </a> </td>
 </tr>
 <tr>
 <td>Coffeescript</td>
@@ -35,20 +32,20 @@ Open Standard for Programming Project Structures
 <tr>
 <td>CSS</td>
 <td> <a href="https://github.com/CSSLint/csslint"> StyleLint </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/11"> #11 </a> </td>
-<td> https://github.com/stylelint/stylelint-config-standard </td>
+<td> <a href="https://github.com/stylelint/stylelint-config-standard"> StyleLint </a> </td>
+<td> <a href="https://github.com/rcorp/standard-project-structure/issues/11"> #4 </a> </td>
 </tr>
 <tr>
 <td>HTML</td>
 <td> <a href="https://github.com/yaniswang/HTMLHint"> HtmlHint </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/13"> #13 </a> </td>
-<td> https://github.com/yaniswang/HTMLHint </td>
+<td> <a href="https://github.com/yaniswang/HTMLHint"> HtmlHint </a> </td>
+<td> <a href="https://github.com/rcorp/standard-project-structure/issues/13"> #4 </a> </t
 </tr>
 <tr>
 <td>Typescript</td>
 <td> <a href="https://github.com/palantir/tslint"> TSLint </a> </td>
-<td> <a "https://github.com/rcorp/standard-project-structure/issues/15"> #15 </a> </td>
-<td> https://github.com/Microsoft/tslint-microsoft-contrib/blob/master/tslint.json </td>
+<td> <a href="https://github.com/Microsoft/tslint-microsoft-contrib/blob/master/tslint.json"> TSLint </a> </td>
+<td> <a "https://github.com/rcorp/standard-project-structure/issues/15"> #4 </a> </td>
 </tr>
 </table>
 
@@ -72,11 +69,9 @@ Open Standard for Programming Project Structures
  
 ### Folder Structure
  
-### Release Management
-
+### Release 
 
 
  
-
 
 
