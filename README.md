@@ -16,7 +16,7 @@ Open Standard for Programming Project Structures
 <table>
 <tr>
 <td><b>Language</td>
-<td><b> Linter Node</td><td><b>Rules</td><td><b>Why?</td>
+<td><b>Linters</td><td><b>Rules</td><td><b>Why?</td>
 </tr>
 <tr>
 <td>Javascript</td>
@@ -70,7 +70,7 @@ Open Standard for Programming Project Structures
  
 ### Folder Structure
  
-### Release 
+### Release Management
 
 
  
