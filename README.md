@@ -27,6 +27,7 @@ Open Standard for Programming Project Structures
 <tr>
 <td>Coffeescript</td>
 <td> <a href="https://github.com/clutchski/coffeelinta"> CoffeeLint </a> </td>
+<td> </td>
 <td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a> </td>
 </tr>
 <tr>
