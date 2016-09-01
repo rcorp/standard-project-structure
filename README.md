@@ -21,9 +21,11 @@ Open Standard for Programming Project Structures
 <tr>
 <td>Javascript</td>
 <td> <a href="https://github.com/eslint/eslint/"> ESLint </a> </td>
-<td> <a href="https://github.com/airbnb/javascript"> Airbnb Javascript </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>
-<b> <a href="https://github.com/rcorp/standard-project-structure/issues/6"> #6 </a> </td>
+<td> <a href="https://github.com/airbnb/javascript"> Airbnb Style Guide </a> </td>
+<td> 
+  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
+  <a href="https://github.com/rcorp/standard-project-structure/issues/6"> #6 </a> 
+</td>
 </tr>
 <tr>
 <td>Coffeescript</td>
@@ -34,23 +36,28 @@ Open Standard for Programming Project Structures
 <tr>
 <td>CSS</td>
 <td> <a href="https://github.com/CSSLint/csslint"> StyleLint </a> </td>
-<td> <a href="https://github.com/stylelint/stylelint-config-standard"> StyleLint Configue Standard </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>
-<b> <a href="github.com/rcorp/standard-project-structure/issues/11"> #11 </a> </td>
+<td> <a href="https://github.com/stylelint/stylelint-config-standard"> StyleLint Standard Config </a> </td>
+<td> 
+  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
+  <a href="github.com/rcorp/standard-project-structure/issues/11"> #11 </a> 
+</td>
 </tr>
 <tr>
 <td>HTML</td>
-<td> <a href="https://github.com/yaniswang/HTMLHint"> HtmlHint </a> </td>
-<td> <a href="https://github.com/yaniswang/HTMLHint"> Yaniswang Htmlhint </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a> 
-<b> <a href="https://github.com/rcorp/standard-project-structure/issues/13"> #13 </a> </td>
+<td> <a href="https://github.com/yaniswang/HTMLHint"> HTMLHint </a> </td>
+<td> <a href="https://github.com/yaniswang/HTMLHint"> HTML Standard Config </a> </td>
+<td> 
+  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>, 
+  <a href="https://github.com/rcorp/standard-project-structure/issues/13"> #13 </a>
+</td>
 </tr>
 <tr>
 <td>Typescript</td>
 <td> <a href="https://github.com/palantir/tslint"> TSLint </a> </td>
-<td> <a href="https://github.com/Microsoft/tslint-microsoft-contrib/blob/master/tslint.json"> Microsoft tslint.json </a> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>
-<b> <a href="https://github.com/rcorp/standard-project-structure/issues/15"> #15 </a> </td>
+<td> <a href="https://github.com/Microsoft/tslint-microsoft-contrib"> Microsoft tslint Standard </a> </td>
+<td> 
+  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
+  <a href="https://github.com/rcorp/standard-project-structure/issues/15"> #15 </a>
 </tr>
 </table>
 
