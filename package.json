@@ -20,6 +20,11 @@
   "bugs": {
     "url": "https://github.com/rcorp/standard-project-structure/issues"
   },
+  "files": [
+    "generators/app",
+    "generators/linter",
+    "generators/test"
+  ],
   "homepage": "https://github.com/rcorp/standard-project-structure#readme",
   "dependencies": {
     "eslint": "2.2.0",
@@ -28,7 +33,9 @@
     "stylelint": "5.0.1",
     "stylelint-config-standard": "3.0.0",
     "tslint": "3.7.4",
-    "typescript": "1.8.10"
+    "typescript": "1.8.10",
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.0"
   },
   "devDependencies": {}
 }
