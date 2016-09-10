@@ -97,7 +97,7 @@ module.exports = yeoman.Base.extend({
     this.log('Writing .editorconfig')
     this.fs.copyTpl(
       this.templatePath('.editorconfig'),
-      this.destinationPath('./editorconfig'), {}
+      this.destinationPath('./.editorconfig'), {}
     )
     if (_includes(this.selectedEditors,'Atom')){
       atomPackages = _union(atomPackages, ["editorconfig"])
@@ -110,11 +110,9 @@ module.exports = yeoman.Base.extend({
   install: function () {
     if (_includes(this.selectedEditors,'Atom')){
       this.log ('Installing Atom Linter Plugins via apm.')
-      this.spawnCommand('apm', ['install', '--package-file', 'atom-packages.txt'])
+      this.spawnCommandSync('apm', ['install', '--packages-file', 'atom-packages.txt'])
     }
 
-    this.log('Installing Linter Dependecies via bower and npm')
-    //this.installDependencies();
-        
+    this.installDependencies();        
   },
 });
