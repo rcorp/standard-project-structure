@@ -47,6 +47,7 @@ module.exports = yeoman.Base.extend({
           'eslint-config-airbnb': '^10.0.1',
           'eslint-plugin-import': '^1.14.0',
           'eslint-plugin-react': '^6.2.0',
+          'eslint-plugin-jsx-a11y': '^2.2.1',
         },
       });
       if (_includes(this.selectedEditors, 'Atom')) {
