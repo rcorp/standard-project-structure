@@ -1,15 +1,13 @@
 const yeoman = require('yeoman-generator');
-const chalk = require('chalk');
 const yosay = require('yosay');
-const _merge = require('lodash/merge');
 
 module.exports = yeoman.Base.extend({
-  initializing: function () {
-    this.composeWith('standard-project-structure:test', {}, {
-      local: require.resolve('../test')
-    });
+  initializing() {
+    this.log(yosay(
+      'Welcome to Standard Project Structure! :)'
+    ));
     this.composeWith('standard-project-structure:linter', {}, {
-      local: require.resolve('../linter')
-    }); 
-  },  
+      local: require.resolve('../linter'),
+    });
+  },
 });
