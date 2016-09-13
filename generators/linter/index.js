@@ -33,8 +33,20 @@ module.exports = yeoman.Base.extend({
       });
     },
   },
-
+  /**
+   * Asks users which languages they are using (only if answers haven't been
+   * stored in the config probably from asking the question from an earlier
+   * generator). Also asks which editors are bing used so relevant linting
+   * extensions / package plugins can be installed for them.
+   *
+   * Adds all dependencies of linters and linter rules into the devDependencies
+   * of package.json. Additionally adds linter plugins for editors into another
+   * file.
+   *
+   * Finally runs an npm install as well as installs plugins for editors.
+   */
   writing() {
+    // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
@@ -84,9 +96,14 @@ module.exports = yeoman.Base.extend({
       _merge(packageJSON, {
         devDependencies: {
           typescript: '^1.8.10',
+          tslint: '^3.15.1',
           'tslint-microsoft-contrib': '^2.0.10',
         },
       });
+      this.fs.copyTpl(
+        this.templatePath('tslint.json'),
+        this.destinationPath('./tslint.json'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-tslint']);
       }
