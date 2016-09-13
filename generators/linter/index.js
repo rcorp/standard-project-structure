@@ -51,6 +51,7 @@ module.exports = yeoman.Base.extend({
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
 
+    // JAVASCRIPT
     if (_includes(this.selectedLanguages, 'JavaScript')) {
       this.log('Configuring ESLint for Linting JavaScript');
       _merge(packageJSON, {
@@ -62,10 +63,16 @@ module.exports = yeoman.Base.extend({
           'eslint-plugin-jsx-a11y': '^2.2.1',
         },
       });
+      this.fs.copyTpl(
+        this.templatePath('.eslintrc'),
+        this.destinationPath('./.eslintrc'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-eslint']);
       }
     }
+
+    // CSS
     if (_includes(this.selectedLanguages, 'CSS')) {
       this.log('Configuring StyleLint for Linting CSS');
       _merge(packageJSON, {
@@ -74,10 +81,16 @@ module.exports = yeoman.Base.extend({
           'stylelint-config-standard': '^13.0.0',
         },
       });
+      this.fs.copyTpl(
+        this.templatePath('.stylelintrc'),
+        this.destinationPath('./stylelintrc'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-stylelint']);
       }
     }
+
+    // HTML
     if (_includes(this.selectedLanguages, 'HTML')) {
       this.log('Configuring HTMLHint for Linting HTML');
       _merge(packageJSON, {
@@ -91,6 +104,8 @@ module.exports = yeoman.Base.extend({
 
       // TODO: Add Rules config file
     }
+
+    // TypeScript
     if (_includes(this.selectedLanguages, 'TypeScript')) {
       this.log('Configuring TSLint for TypeScript');
       _merge(packageJSON, {
@@ -112,6 +127,7 @@ module.exports = yeoman.Base.extend({
     this.log('Writing to package.json');
     this.fs.writeJSON(this.destinationPath('package.json'), packageJSON);
 
+    // editorconfig
     this.log('Writing .editorconfig');
     this.fs.copyTpl(
       this.templatePath('.editorconfig'),
