@@ -83,7 +83,7 @@ module.exports = yeoman.Base.extend({
       });
       this.fs.copyTpl(
         this.templatePath('.stylelintrc'),
-        this.destinationPath('./stylelintrc'), {}
+        this.destinationPath('./.stylelintrc'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-stylelint']);
