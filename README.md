@@ -1,5 +1,12 @@
 # standard-project-structure
-Open Standard for Programming Project Structures
+*Automate Everything ™*
+
+![standard-project-structure](https://cloud.githubusercontent.com/assets/1716462/13458681/b3f206d8-e094-11e5-808d-8ebb9910c743.png)
+
+Standard Project Structure (SPS) is a mission to improve developer productivity! It is a complete set of tools along with configurations and automatic scaffolding which hopefully increases your efficiency by 10000%!
+
+## Status
+This is a work in progress but we are getting closer to a Public Launch! We need ***your*** help to make this project useful. Browse the [discussions](https://github.com/rcorp/standard-project-structure/issues) and leave your comments!
 
 ## Modules
 
