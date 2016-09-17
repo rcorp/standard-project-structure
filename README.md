@@ -3,11 +3,13 @@
 
 ![standard-project-structure](https://cloud.githubusercontent.com/assets/1716462/13458681/b3f206d8-e094-11e5-808d-8ebb9910c743.png)
 
-Standard Project Structure (SPS) is a mission to improve developer productivity! It is a complete set of tools along with configurations and automatic scaffolding which hopefully increases your efficiency by 10000%! In the ever changing world of technology especially the explosion of choice in open source world, software quality has become the most metrics more for new users. The problem is worsened with seasoned experts in the Web/JS/node world frequently diagnosed with <a href="https://en.wikipedia.org/wiki/Analysis_paralysis"> analysis paralysis </a>
+Standard Project Structure (SPS) is a mission to improve developer productivity! It is a complete set of tools along with configurations and automatic scaffolding which hopefully increases your efficiency by 10000%! 
 
-SPS helps you by automatically configuring your software project with [Code Linting](#linting), [Unit Test Runner](#testing), [Functional Testing](#testing), Front End Development Management, Bundling, [Documentation](#documentation), Backend Development Management, [Task Runners](#task-runners), Mobile/Multi Platform Development, Project Structure, Source Code Management, Issue Management, Code Review Workflow, Continuous Integration, Code Coverage, and more! All configure to work together harmoniously.
+In the ever changing world of technology especially the explosion of choice in open source world, software quality has become the most metrics more for new users. The problem is worsened with seasoned experts in the Web/JS/node world frequently diagnosed with <a href="https://en.wikipedia.org/wiki/Analysis_paralysis"> analysis paralysis </a>
 
-We also try to help you master these tools and provide 'Best practices' so that you can concentrate on your project and leave the rest to us!
+SPS helps you by automatically configuring your software project with [Code Linting](#linting), [Unit Test Runner](#testing), [Functional Testing](#testing), [Front End Dependency Management](#dependency-management), Bundling, [Documentation](#documentation), [Backend Dependency Management](#dependency-management), [Task Runners](#task-runners), Mobile/Multi Platform Development, Project Structure, Source Code Management, Issue Management, Code Review Workflow, Continuous Integration, Code Coverage, and more! All configured to work together harmoniously.
+
+We also try to help you master these tools and provide *'Best Practices'* so that you can concentrate on your project and leave the rest to us!
 
 
 ## Status
