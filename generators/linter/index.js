@@ -112,7 +112,7 @@ module.exports = yeoman.Base.extend({
         devDependencies: {
           typescript: '^1.8.10',
           tslint: '^3.15.1',
-          'tslint-microsoft-contrib': '^2.0.10',
+          'tslint-microsoft-contrib': '^2.0.12',
         },
       });
       this.fs.copyTpl(
