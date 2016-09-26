@@ -1,0 +1,6 @@
+
+linter-eslint
+linter-stylelint
+linter-htmlhint
+linter-tslint
+editorconfig
