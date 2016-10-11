@@ -61,6 +61,7 @@ module.exports = yeoman.Base.extend({
           'eslint-plugin-import': '^1.14.0',
           'eslint-plugin-react': '^6.2.0',
           'eslint-plugin-jsx-a11y': '^2.2.1',
+          'eslint-plugin-html': '^1.5.3',
         },
       });
       this.fs.copyTpl(

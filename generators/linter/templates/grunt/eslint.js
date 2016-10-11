@@ -1,4 +1,7 @@
-
   module.exports = {
-    target: ['./*.js'],
+    options: {
+      quiet: 'true',
+      ignorePath: './.lintignore',
+    },
+    target: ['./**/*.js'],
   };
