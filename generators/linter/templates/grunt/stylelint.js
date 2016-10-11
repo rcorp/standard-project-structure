@@ -1,5 +1,5 @@
 module.exports = {
-  src: './*.css',
+  src: './**/*.css',
   options: {
     ignorePath: './.linterignore',
   },
