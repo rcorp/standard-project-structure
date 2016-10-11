@@ -3,7 +3,7 @@ module.exports = {
   lint: [
     'stylelint',
     'eslint',
-    'mochaTest',
     'htmlhint',
+    'tslint',
   ],
 };
