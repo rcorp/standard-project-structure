@@ -8,28 +8,26 @@ module.exports = yeoman.Base.extend({
       const self = this;
 
       this.log(yosay(
-        'Add Testing Framework for test cases'
+        'Installing Testing frameworks'
       ));
       return this.prompt([{
         type: 'checkbox',
-        name: 'selectedFramework',
+        name: 'selectedTestFramework',
         message: 'Which Framework do you use?',
         choices: ['Mocha'],
         default: ['Mocha'],
-        when: () => !self.config.get('selectedFramework'),
+        when: () => !self.config.get('selectedTestFramework'),
       }])
       .then(answers => {
-        self.selectedFramework = self.config.get('selectedFramework') || answers.selectedFramework;
+        self.selectedTestFramework = self.config.get('selectedTestFramework') ||
+        answers.selectedTestFramework;
       });
     },
   },
-  /**
-   * Finally runs an npm install as well as installs plugins for editors.
-   */
   writing() {
     // Mocha
-    if (_includes(this.selectedFramework, 'Mocha')) {
-      this.log('Configuring Mocha for mocha test cases');
+    if (_includes(this.selectedTestFramework, 'Mocha')) {
+      this.log('Configuring default options for mocha');
       this.fs.copyTpl(
          this.templatePath('mocha.opts'),
          this.destinationPath('./test/mocha.opts'), {}
