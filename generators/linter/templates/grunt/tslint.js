@@ -1,6 +1,6 @@
 module.exports = {
   target: ['./**/*.ts'],
   options: {
-    exclude: './.lintignore',
+    exclude: './.linterignore',
   },
 };
