@@ -7,26 +7,26 @@ module.exports = yeoman.Base.extend({
     structure() {
       const self = this;
       this.log(yosay(
-        'Create Basi Folder Structure'
+        'Create General Project Structure'
       ));
       return this.prompt([{
         type: 'checkbox',
-        name: 'basicFolderStructure',
-        message: 'Which Project do you use?',
-        choices: ['Project'],
-        default: ['Project'],
-        when: () => !self.config.get('basicFolderStructure'),
+        name: 'projectStructure',
+        message: 'Which Project Structure do you use?',
+        choices: ['Generic'],
+        default: ['Generic'],
+        when: () => !self.config.get('projectStructure'),
       }])
       .then(answers => {
-        self.basicFolderStructure = self.config.get('basicFolderStructure') ||
-        answers.basicFolderStructure;
+        self.projectStructure = self.config.get('projectStructure') ||
+        answers.projectStructure;
       });
     },
   },
   writing() {
-    // Project
-    if (_includes(this.basicFolderStructure, 'Project')) {
-      this.log('Configuring Basic Folder Structre');
+    // Generic
+    if (_includes(this.projectStructure, 'Generic')) {
+      this.log('Configuring General Project Structure');
       this.fs.copyTpl(
         this.templatePath('**'),
         this.destinationPath('./'), {}
