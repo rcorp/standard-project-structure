@@ -1,6 +1,9 @@
 module.exports = {
   default: [],
-  build: [
+  test: [
     'mochaTest',
+  ],
+  cover: [
+    'mocha_istanbul',
   ],
 };
