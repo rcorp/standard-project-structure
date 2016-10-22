@@ -3,7 +3,5 @@ module.exports = {
   lint: [
     'stylelint',
     'eslint',
-    'htmlhint',
-    'tslint',
   ],
 };

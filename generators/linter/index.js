@@ -48,25 +48,37 @@ module.exports = yeoman.Base.extend({
   writing() {
     // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
+    let aliasesJS = require(this.destinationPath('./grunt/aliases.js'));
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
 
     // JAVASCRIPT
     if (_includes(this.selectedLanguages, 'JavaScript')) {
       this.log('Configuring ESLint for Linting JavaScript');
+      aliasesJS = 'module.exports=' + JSON.stringify(_merge(aliasesJS, {
+        default: [],
+        lint: [
+          'stylelint',
+          'eslint',
+        ],
+      }), null, 2);
       _merge(packageJSON, {
         devDependencies: {
-          eslint: '^3.4.0',
           'eslint-config-airbnb': '^10.0.1',
           'eslint-plugin-import': '^1.14.0',
           'eslint-plugin-react': '^6.2.0',
           'eslint-plugin-jsx-a11y': '^2.2.1',
           'eslint-plugin-html': '^1.5.3',
+          'grunt-eslint': '^19.0.0',
         },
       });
       this.fs.copyTpl(
         this.templatePath('.eslintrc'),
         this.destinationPath('./.eslintrc'), {}
+      );
+      this.fs.copyTpl(
+        this.templatePath('grunt/eslint.js'),
+        this.destinationPath('./grunt/eslint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-eslint']);
@@ -78,13 +90,17 @@ module.exports = yeoman.Base.extend({
       this.log('Configuring StyleLint for Linting CSS');
       _merge(packageJSON, {
         devDependencies: {
-          stylelint: '^7.2.0',
+          'grunt-stylelint': '^0.6.0',
           'stylelint-config-standard': '^13.0.0',
         },
       });
       this.fs.copyTpl(
         this.templatePath('.stylelintrc'),
         this.destinationPath('./.stylelintrc'), {}
+      );
+      this.fs.copyTpl(
+        this.templatePath('grunt/stylelint.js'),
+        this.destinationPath('./grunt/stylelint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-stylelint']);
@@ -127,6 +143,7 @@ module.exports = yeoman.Base.extend({
 
     this.log('Writing to package.json');
     this.fs.writeJSON(this.destinationPath('package.json'), packageJSON);
+    this.fs.write(this.destinationPath('grunt/aliases.js'), aliasesJS);
 
     // editorconfig
     this.log('Writing .editorconfig');

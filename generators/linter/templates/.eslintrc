@@ -2,5 +2,5 @@
 // Copy this file, and add rule overrides as needed.
 {
   "extends": "airbnb",
-  "plugins": "html"
+  "plugins": ["html"]
 }
