@@ -32,7 +32,6 @@ module.exports = yeoman.Base.extend({
   },
   writing() {
     // Read a package.json if it exists or create it
-    this.log('this', JSON.stringify(this.fs));
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
     // Read a aliases.js if it exists or create it
     let aliasesJS = require(this.destinationPath('./grunt/aliases.js'));
