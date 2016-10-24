@@ -26,7 +26,7 @@ module.exports = yeoman.Base.extend({
   writing() {
     // Generic
     if (_includes(this.projectStructure, 'Generic')) {
-      this.log('Configuring General Project Structure');
+      this.log('Configuring Generic Project Structure');
       this.fs.copyTpl(
         this.templatePath('**'),
         this.destinationPath('./'), {}
