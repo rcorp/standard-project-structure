@@ -55,13 +55,8 @@ module.exports = yeoman.Base.extend({
     // JAVASCRIPT
     if (_includes(this.selectedLanguages, 'JavaScript')) {
       this.log('Configuring ESLint for Linting JavaScript');
-      aliasesJS = 'module.exports=' + JSON.stringify(_merge(aliasesJS, {
-        default: [],
-        lint: [
-          'stylelint',
-          'eslint',
-        ],
-      }), null, 2);
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('eslint'),
       _merge(packageJSON, {
         devDependencies: {
           'eslint-config-airbnb': '^10.0.1',
@@ -88,6 +83,8 @@ module.exports = yeoman.Base.extend({
     // CSS
     if (_includes(this.selectedLanguages, 'CSS')) {
       this.log('Configuring StyleLint for Linting CSS');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('stylelint'),
       _merge(packageJSON, {
         devDependencies: {
           'grunt-stylelint': '^0.6.0',
@@ -143,7 +140,7 @@ module.exports = yeoman.Base.extend({
 
     this.log('Writing to package.json');
     this.fs.writeJSON(this.destinationPath('package.json'), packageJSON);
-    this.fs.write(this.destinationPath('grunt/aliases.js'), aliasesJS);
+    this.fs.write(this.destinationPath('grunt/aliases.js'), 'module.exports=' + JSON.stringify(aliasesJS, null, 2));
 
     // editorconfig
     this.log('Writing .editorconfig');
