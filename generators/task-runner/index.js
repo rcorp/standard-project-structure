@@ -33,7 +33,7 @@ module.exports = yeoman.Base.extend({
       this.log('Configuring Gruntfile for Task Runner');
       _merge(packageJSON, {
         devDependencies: {
-          'grunt': '^1.0.1',
+          grunt: '^1.0.1',
           'load-grunt-config': '^0.19.2',
         },
       });
