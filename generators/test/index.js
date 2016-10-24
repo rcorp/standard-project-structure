@@ -49,7 +49,7 @@ module.exports = yeoman.Base.extend({
       _merge(packageJSON, {
         devDependencies: {
           'grunt-mocha-test': '^0.13.2',
-          'mocha': '^3.1.2',
+          mocha: '^3.1.2',
         },
       });
       this.fs.write(this.destinationPath('grunt/aliases.js'), aliasesJS);
