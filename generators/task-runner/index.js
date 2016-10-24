@@ -9,12 +9,12 @@ module.exports = yeoman.Base.extend({
       const self = this;
 
       this.log(yosay(
-        'Configure Task Runner for Grunt'
+        'Configure Task Runner'
       ));
       return this.prompt([{
         type: 'checkbox',
         name: 'selectedTaskRunner',
-        message: 'Which Task Runner do you use?',
+        message: 'Which Task Runner do you want to configure?',
         choices: ['Grunt'],
         default: ['Grunt'],
         when: () => !self.config.get('selectedTaskRunner'),
@@ -28,7 +28,6 @@ module.exports = yeoman.Base.extend({
   writing() {
     // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
-    // Task Runner
     if (_includes(this.selectedTaskRunner, 'Grunt')) {
       this.log('Configuring Gruntfile for Task Runner');
       _merge(packageJSON, {
@@ -37,13 +36,15 @@ module.exports = yeoman.Base.extend({
           'load-grunt-config': '^0.19.2',
         },
       });
-      this.fs.copyTpl(
-        this.templatePath('grunt/aliases.js'),
-        this.destinationPath('./grunt/aliases.js'), {}
-      );
+      this.log('Creating a Gruntfile');
       this.fs.copyTpl(
         this.templatePath('Gruntfile.js'),
         this.destinationPath('./Gruntfile.js'), {}
+      );
+      this.log('Creating an alias file for grunt');
+      this.fs.copyTpl(
+        this.templatePath('grunt/aliases.js'),
+        this.destinationPath('./grunt/aliases.js'), {}
       );
     }
     this.log('Writing to package.json');
