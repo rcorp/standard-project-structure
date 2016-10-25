@@ -112,6 +112,10 @@ module.exports = yeoman.Base.extend({
           htmlhint: '^0.9.13',
         },
       });
+      this.fs.copyTpl(
+        this.templatePath('grunt/stylelint.js'),
+        this.destinationPath('./grunt/htmlhint.js'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-htmlhint']);
       }
@@ -132,6 +136,10 @@ module.exports = yeoman.Base.extend({
       this.fs.copyTpl(
         this.templatePath('tslint.json'),
         this.destinationPath('./tslint.json'), {}
+      );
+      this.fs.copyTpl(
+        this.templatePath('grunt/stylelint.js'),
+        this.destinationPath('./grunt/tslint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-tslint']);
