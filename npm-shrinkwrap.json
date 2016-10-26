@@ -1,6 +1,6 @@
 {
   "name": "standard-project-structure",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "acorn": {
       "version": "3.2.0",
