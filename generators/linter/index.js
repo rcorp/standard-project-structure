@@ -117,7 +117,7 @@ module.exports = yeoman.Base.extend({
         },
       });
       this.fs.copyTpl(
-        this.templatePath('grunt/stylelint.js'),
+        this.templatePath('grunt/htmlhint.js'),
         this.destinationPath('./grunt/htmlhint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
@@ -144,7 +144,7 @@ module.exports = yeoman.Base.extend({
         this.destinationPath('./tslint.json'), {}
       );
       this.fs.copyTpl(
-        this.templatePath('grunt/stylelint.js'),
+        this.templatePath('grunt/tslint.js'),
         this.destinationPath('./grunt/tslint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
