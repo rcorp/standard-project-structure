@@ -18,16 +18,36 @@ This is a work in progress but we are getting closer to a Public Launch! We need
 
 ## Modules
 
-1. [Linting] (#linting) 
+1. [Linting](#linting) 
 2. [Testing](#testing)
 3. [Continuous Integration](#continuous-integration)
 4. [Dependency Management](#dependency-management)
 5. [Task Runners](#task-runners)
-6. [Folder Structure](#folder-structure)
+6. [Project Structure](#project-structure)
 7. [Release Management](#release-management)
 8. [Documentation](#documentation)
 
 ## Linting
+
+All code should look like a single person typed it, no matter how many people contributed so its easy to read and contribute.
+
+Linting is the process of checking the source code for Programmatic as well as Stylistic errors. This is most helpful in identifying some common and uncommon mistakes that are made during coding.
+
+#### Installation
+
+Add linters and Atom to your project. For this, we will run this command:
+
+    yo ./standard-project-structure/generators/linter
+
+- Asks for all languages being used.
+- Installs tasks for each linter.
+- Asks for Editors being used and installs editor Plugins.
+ 
+#### Usage
+
+    grunt lint
+
+ - Runs all linters installed.
 
 <table>
 <tr>
@@ -78,6 +98,22 @@ This is a work in progress but we are getting closer to a Public Launch! We need
 </table>
 
 ### Testing
+
+we do manual testing of some project, we generally run some command, and check the output, or exit code to verify if the command did what it was supposed to do.
+
+Some Framework or tools uses to your project like, Mocha, Code Coverage etc.
+
+#### Installation
+
+Add Automate test cases our project, using this command:
+
+    yo ./standard-project-structure/generators/task-runner
+
+#### Usage
+
+    grunt test
+    grunt cover    
+
  
 #### Unit Testing
 
@@ -92,12 +128,29 @@ This is a work in progress but we are getting closer to a Public Launch! We need
 #### Bower
 
 ### Task Runners
- 
-#### Grunt
- 
-### Folder Structure
+
+Task Runner is a process of automation of task. You will have to do less work when performing repetitive tasks like bundling, unit testing, linting, etc.
+
+#### Installation
+
+Add Task Runner our project, using this command:
+
+    yo ./standard-project-structure/generators/task-runner 
+
+### Project Structure
+
+Making documentation accessible enables people to learn about a project; making it easy to update ensures that documentation stays relevant.
+
+#### Installation
+
+Run these command using create Initial Project Structure.
+
+    yo ./standard-project-structure/generators/projectStructure
  
 ### Release Management
+
+We attempt to stick to [Semantic Versioning](http://semver.org/). Most of the time, development should be against a new minor version - fixing bugs and adding new features that are backwards compatible.
+[Read more...](https://github.com/rcorp/standard-project-structure/blob/masterRELEASE.md)
 
 ### Documentation
 
