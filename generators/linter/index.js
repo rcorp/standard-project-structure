@@ -51,7 +51,9 @@ module.exports = yeoman.Base.extend({
     let aliasesJS = require(this.destinationPath('./grunt/aliases.js'));
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
-
+    if (aliasesJS.lint !== []) {
+      aliasesJS.lint = [];
+    }
     // JAVASCRIPT
     if (_includes(this.selectedLanguages, 'JavaScript')) {
       this.log('Configuring ESLint for Linting JavaScript');
@@ -107,6 +109,8 @@ module.exports = yeoman.Base.extend({
     // HTML
     if (_includes(this.selectedLanguages, 'HTML')) {
       this.log('Configuring HTMLHint for Linting HTML');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('htmlhint'),
       _merge(packageJSON, {
         devDependencies: {
           htmlhint: '^0.9.13',
@@ -126,6 +130,8 @@ module.exports = yeoman.Base.extend({
     // TypeScript
     if (_includes(this.selectedLanguages, 'TypeScript')) {
       this.log('Configuring TSLint for TypeScript');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('tslint'),
       _merge(packageJSON, {
         devDependencies: {
           typescript: '^1.8.10',
