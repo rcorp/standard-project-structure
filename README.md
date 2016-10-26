@@ -29,9 +29,10 @@ This is a work in progress but we are getting closer to a Public Launch! We need
 
 ## Linting
 
+All code should look like a single person typed it, no matter how many people contributed so its easy to read and contribute.
+
 Linting is the process of checking the source code for Programmatic as well as Stylistic errors. This is most helpful in identifying some common and uncommon mistakes that are made during coding.
 [Read more...](https://github.com/rcorp/standard-project-structure/blob/master/docs/linter.md)
-
 
 ### Testing
  

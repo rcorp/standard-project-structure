@@ -1,7 +1,29 @@
 #Linter
 
+All code should look like a single person typed it, no matter how many people contributed so its easy to read and contribute.
+
 Linting is the process of checking the source code for Programmatic as well as Stylistic errors. This is most helpful in identifying some common and uncommon mistakes that are made during coding.
 We use `Atom` code editor for linting. So we need to install Atom for this.
+
+#### Installation
+
+Check whether your system has Yeoman installed or not. If Yeoman is not installed, then we need to run these command:
+
+    npm install -g yo
+
+After that Add linters and Atom to your project. For this, we will run this command:
+
+    yo ./standard-project-structure/generators/linter
+
+- Asks for all languages being used.
+- Installs tasks for each linter.
+- Asks for Editors being used and installs editor Plugins.
+ 
+#### Usage
+
+    grunt lint
+
+ - Runs all linters installed.
 
 <table>
 <tr>
@@ -62,10 +84,4 @@ We use some lintin tools like:
 
 `Atom Code Editor` - Atom is open source project, Atom is a hackable text editor for the 21st century, built on Electron, and based on everything. Atom is designed it to be deeply customizable, but still approachable using the default configuration.
 
-Check whether your system has Yeoman installed or not. If Yeoman is not installed, then we need to run these command:
 
-    npm install -g yo
-
-After that Add linters and Atom to your project. For this, we will run this command:
-
-    yo ./standard-project-structure/generators/linter
