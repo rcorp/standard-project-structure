@@ -1,5 +1,6 @@
 #Project Structure
 
+Making documentation accessible enables people to learn about a project; making it easy to update ensures that documentation stays relevant.
 
 > Initial Project Structure created to in the project.
 

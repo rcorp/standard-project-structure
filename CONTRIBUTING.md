@@ -27,7 +27,7 @@ restrictions:
 Our bug tracker utilizes several labels to help organize and identify issues. Here's what they represent and how we use them:
 
 - `basic folder structure` - Issues that are reported to what it structure of Project and specific folders.
--  `dependency management` - Issues that have been confirmed with which version use for all modules.
+- `dependency management` - Issues that have been confirmed with which version use for all modules.
 - `github structure` - Issues that are reported to how flow git process.
 - `linter` - Issues that are reported to checks code for stylistic or programming errors.
 - `scaffolding` - Issues with our included javascript based Yeoman, which is used to run all our generators, and more.
