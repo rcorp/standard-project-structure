@@ -58,6 +58,10 @@ module.exports = yeoman.Base.extend({
          this.destinationPath('./test/mocha.opts'), {}
        );
       this.fs.copyTpl(
+          this.templatePath('grunt/mochaTest.js'),
+          this.destinationPath('./grunt/mochaTest.js'), {}
+        );
+      this.fs.copyTpl(
          this.templatePath('.eslintrc'),
          this.destinationPath('./test/.eslintrc'), {}
        );
@@ -76,6 +80,10 @@ module.exports = yeoman.Base.extend({
           'grunt-mocha-istanbul': '^5.0.2',
         },
       });
+      this.fs.copyTpl(
+          this.templatePath('grunt/mocha_istanbul.js'),
+          this.destinationPath('./grunt/mocha_istanbul.js'), {}
+        );
       this.fs.write(this.destinationPath('grunt/aliases.js'), cover);
     }
     this.log('Writing to package.json');
