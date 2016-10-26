@@ -48,24 +48,34 @@ module.exports = yeoman.Base.extend({
   writing() {
     // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
+    let aliasesJS = require(this.destinationPath('./grunt/aliases.js'));
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
-
+    if (aliasesJS.lint !== []) {
+      aliasesJS.lint = [];
+    }
     // JAVASCRIPT
     if (_includes(this.selectedLanguages, 'JavaScript')) {
       this.log('Configuring ESLint for Linting JavaScript');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('eslint'),
       _merge(packageJSON, {
         devDependencies: {
-          eslint: '^3.4.0',
           'eslint-config-airbnb': '^10.0.1',
           'eslint-plugin-import': '^1.14.0',
           'eslint-plugin-react': '^6.2.0',
           'eslint-plugin-jsx-a11y': '^2.2.1',
+          'eslint-plugin-html': '^1.5.3',
+          'grunt-eslint': '^19.0.0',
         },
       });
       this.fs.copyTpl(
         this.templatePath('.eslintrc'),
         this.destinationPath('./.eslintrc'), {}
+      );
+      this.fs.copyTpl(
+        this.templatePath('grunt/eslint.js'),
+        this.destinationPath('./grunt/eslint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-eslint']);
@@ -75,15 +85,21 @@ module.exports = yeoman.Base.extend({
     // CSS
     if (_includes(this.selectedLanguages, 'CSS')) {
       this.log('Configuring StyleLint for Linting CSS');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('stylelint'),
       _merge(packageJSON, {
         devDependencies: {
-          stylelint: '^7.2.0',
+          'grunt-stylelint': '^0.6.0',
           'stylelint-config-standard': '^13.0.0',
         },
       });
       this.fs.copyTpl(
         this.templatePath('.stylelintrc'),
         this.destinationPath('./.stylelintrc'), {}
+      );
+      this.fs.copyTpl(
+        this.templatePath('grunt/stylelint.js'),
+        this.destinationPath('./grunt/stylelint.js'), {}
       );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-stylelint']);
@@ -93,11 +109,17 @@ module.exports = yeoman.Base.extend({
     // HTML
     if (_includes(this.selectedLanguages, 'HTML')) {
       this.log('Configuring HTMLHint for Linting HTML');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('htmlhint'),
       _merge(packageJSON, {
         devDependencies: {
           htmlhint: '^0.9.13',
         },
       });
+      this.fs.copyTpl(
+        this.templatePath('grunt/htmlhint.js'),
+        this.destinationPath('./grunt/htmlhint.js'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-htmlhint']);
       }
@@ -108,6 +130,8 @@ module.exports = yeoman.Base.extend({
     // TypeScript
     if (_includes(this.selectedLanguages, 'TypeScript')) {
       this.log('Configuring TSLint for TypeScript');
+      aliasesJS.lint = aliasesJS.lint || [],
+      aliasesJS.lint.push('tslint'),
       _merge(packageJSON, {
         devDependencies: {
           typescript: '^1.8.10',
@@ -119,6 +143,10 @@ module.exports = yeoman.Base.extend({
         this.templatePath('tslint.json'),
         this.destinationPath('./tslint.json'), {}
       );
+      this.fs.copyTpl(
+        this.templatePath('grunt/tslint.js'),
+        this.destinationPath('./grunt/tslint.js'), {}
+      );
       if (_includes(this.selectedEditors, 'Atom')) {
         atomPackages = _union(atomPackages, ['linter-tslint']);
       }
@@ -126,6 +154,7 @@ module.exports = yeoman.Base.extend({
 
     this.log('Writing to package.json');
     this.fs.writeJSON(this.destinationPath('package.json'), packageJSON);
+    this.fs.write(this.destinationPath('grunt/aliases.js'), 'module.exports=' + JSON.stringify(aliasesJS, null, 2));
 
     // editorconfig
     this.log('Writing .editorconfig');
