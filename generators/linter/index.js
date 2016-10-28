@@ -48,7 +48,8 @@ module.exports = yeoman.Base.extend({
   writing() {
     // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
-    let aliasesJS = require(this.destinationPath('./grunt/aliases.js'));
+    let aliasesJS = this.fs.exists(this.destinationPath('./grunt/aliases.js')) ?
+      require(this.destinationPath('./grunt/aliases.js')) : {};
     let atomPackages = _includes(this.selectedEditors, 'Atom') ?
       this.fs.read(this.destinationPath('atom-packages.txt'), { defaults: '' }).split('\n') : null;
     if (aliasesJS.lint !== []) {
