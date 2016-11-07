@@ -28,7 +28,6 @@ This is a work in progress but we are getting closer to a Public Launch! We need
 8. [Documentation](#documentation)
 
 ## Linting
-
 All code should look like a single person typed it, no matter how many people contributed so its easy to read and contribute.
 
 Linting is the process of checking the source code for Programmatic as well as Stylistic errors. This is most helpful in identifying some common and uncommon mistakes that are made during coding.
@@ -46,59 +45,10 @@ Add linters and Atom to your project. For this, we will run this command:
 #### Usage
 
     grunt lint
+    
+[Read more...](./docs/linter.md)
 
- - Runs all linters installed.
-
-<table>
-<tr>
-<td><b>Language</td>
-<td><b>Linters</td><td><b>Rules</td><td><b>Why?</td>
-</tr>
-<tr>
-<td>Javascript</td>
-<td> <a href="https://github.com/eslint/eslint/"> ESLint </a> </td>
-<td> <a href="https://github.com/airbnb/javascript"> Airbnb Style Guide </a> </td>
-<td> 
-  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
-  <a href="https://github.com/rcorp/standard-project-structure/issues/6"> #6 </a> 
-</td>
-</tr>
-<tr>
-<td>Coffeescript</td>
-<td> <a href="https://github.com/clutchski/coffeelinta"> CoffeeLint </a> </td>
-<td> </td>
-<td> <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a> </td>
-</tr>
-<tr>
-<td>CSS</td>
-<td> <a href="https://github.com/CSSLint/csslint"> StyleLint </a> </td>
-<td> <a href="https://github.com/stylelint/stylelint-config-standard"> StyleLint Standard Config </a> </td>
-<td> 
-  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
-  <a href="github.com/rcorp/standard-project-structure/issues/11"> #11 </a> 
-</td>
-</tr>
-<tr>
-<td>HTML</td>
-<td> <a href="https://github.com/yaniswang/HTMLHint"> HTMLHint </a> </td>
-<td> <a href="https://github.com/yaniswang/HTMLHint"> HTML Standard Config </a> </td>
-<td> 
-  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>, 
-  <a href="https://github.com/rcorp/standard-project-structure/issues/13"> #13 </a>
-</td>
-</tr>
-<tr>
-<td>Typescript</td>
-<td> <a href="https://github.com/palantir/tslint"> TSLint </a> </td>
-<td> <a href="https://github.com/Microsoft/tslint-microsoft-contrib"> Microsoft tslint Standard </a> </td>
-<td> 
-  <a href="https://github.com/rcorp/standard-project-structure/issues/4"> #4 </a>,
-  <a href="https://github.com/rcorp/standard-project-structure/issues/15"> #15 </a>
-</tr>
-</table>
-
-### Testing
-
+## Testing
 we do manual testing of some project, we generally run some command, and check the output, or exit code to verify if the command did what it was supposed to do.
 
 Some Framework or tools uses to your project like, Mocha, Code Coverage etc.
@@ -107,28 +57,28 @@ Some Framework or tools uses to your project like, Mocha, Code Coverage etc.
 
 Add Automate test cases our project, using this command:
 
-    yo ./standard-project-structure/generators/task-runner
+    yo ./standard-project-structure/generators/test
 
 #### Usage
 
     grunt test
     grunt cover    
 
+[Read more...](./docs/testing.md)
  
-#### Unit Testing
+### Unit Testing
 
-#### Functional Testing
+### Functional Testing
  
-### Continuous Integration
+## Continuous Integration
 
-### Dependency Management
+## Dependency Management
  
-#### NPM
+### NPM
  
-#### Bower
+### Bower
 
-### Task Runners
-
+## Task Runners
 Task Runner is a process of automation of task. You will have to do less work when performing repetitive tasks like bundling, unit testing, linting, etc.
 
 #### Installation
@@ -137,8 +87,9 @@ Add Task Runner our project, using this command:
 
     yo ./standard-project-structure/generators/task-runner 
 
-### Project Structure
+[Read more...](./docs/task-runner.md)
 
+## Project Structure
 Making documentation accessible enables people to learn about a project; making it easy to update ensures that documentation stays relevant.
 
 #### Installation
@@ -146,15 +97,14 @@ Making documentation accessible enables people to learn about a project; making 
 Run these command using create Initial Project Structure.
 
     yo ./standard-project-structure/generators/projectStructure
- 
-### Release Management
 
+[Read more...](./docs/project-structure.md)
+ 
+## Release Management
 We attempt to stick to [Semantic Versioning](http://semver.org/). Most of the time, development should be against a new minor version - fixing bugs and adding new features that are backwards compatible.
-[Read more...](https://github.com/rcorp/standard-project-structure/blob/masterRELEASE.md)
+[Read more...](./docs/release.md)
 
-### Documentation
+## Documentation
 
-
- 
-
-
+## License
+standard-project-structure (SPS) is licensed under the Apache 2.0 license, see [LICENSE](./LICENSE) for details.
