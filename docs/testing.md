@@ -1,6 +1,16 @@
-#Task Runner
+#Testing 
 
-Task Runner is a process of automation of task. You will have to do less work when performing repetitive tasks like bundling, unit testing, linting, etc.
+we do manual testing of some project, we generally run some command, and check the output, or exit code to verify if the command did what it was supposed to do.
+
+Some Framework or tools uses to your project like, Mocha, Code Coverage etc.
+
+###Mocha
+
+Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.
+[Read More...](https://mochajs.org/)
+
+###Code Coverage
+
 
 Task Runner using for `Gruntfile`.
 Grunt was originally created by Ben Alman in 2012, as an efficient alternative to simply writing and maintaining a suite of "javascript build process" tasks in one huge file. It was designed as a task-based command line build tool for JavaScript projects.
