@@ -163,6 +163,13 @@ module.exports = yeoman.Base.extend({
       this.templatePath('.editorconfig'),
       this.destinationPath('./.editorconfig'), {}
     );
+
+    // linterignore
+    this.log('Writing .linterignore');
+    this.fs.copyTpl(
+      this.templatePath('.linterignore'),
+      this.destinationPath('./.linterignore'), {}
+    );
     if (_includes(this.selectedEditors, 'Atom')) {
       atomPackages = _union(atomPackages, ['editorconfig']);
 
