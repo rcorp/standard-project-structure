@@ -118,6 +118,10 @@ module.exports = yeoman.Base.extend({
         },
       });
       this.fs.copyTpl(
+        this.templatePath('.htmlhintrc'),
+        this.destinationPath('./.htmlhintrc'), {}
+      );
+      this.fs.copyTpl(
         this.templatePath('grunt/htmlhint.js'),
         this.destinationPath('./grunt/htmlhint.js'), {}
       );
