@@ -6,7 +6,7 @@ Linting is the process of checking the source code for Programmatic as well as S
 
 #### Installation
 
-Add linters and Atom to your project. For this, we will run this command:
+Add linters and Atom to our project. For this, we will run this command:
 
     yo ./standard-project-structure/generators/linter
 

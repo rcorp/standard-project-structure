@@ -9,18 +9,20 @@ Firstly you need a `package.json`,  if this file exists in our project then we w
 
     npm init
 
-###Tasks
+##Tasks
+
 Tasks are the modules that performs a specified job. They are defined in the Gruntfile.
 
 Developers can load predefined tasks from existing Grunt plugins and/or write custom code to define their own tasks depending on their requirements. Once defined, these tasks can be run from the command line by simply executing grunt `taskname`. If the `taskname` defined in the Gruntfile is 'default' then simply executing grunt will suffice.
 
-###Add Task Runner in the Project
-Add some modules like:
+##Add Task Runner in the Project
 
-    npm install -g yo
-After that add Task Runner in the project using this command:
+#### Installation
+
+Add Task Runner to our project. For this, we will run this command:
 
     yo ./standard-project-structure/generators/task-runner
+
 Files and folders will be created.
 
 `Gruntfile.js` - Add only load-grunt-config plugin (load-grunt-config is a Grunt library that allows you to break up your Gruntfile config by task).

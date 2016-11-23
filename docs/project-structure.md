@@ -4,13 +4,14 @@ Making documentation accessible enables people to learn about a project; making 
 
 > Initial Project Structure created to in the project.
 
-### Create Generic Project Structure
-Yeoman is required. So firstly we need to check whether yeoman is installed or not.
+## Create Generic Project Structure
 
-    npm install -g yo
-After that run these command using create Initial Project Structure.
+#### Installation
+
+Add Initial Project Structue to our project. For this, we will run this command:
 
     yo ./standard-project-structure/generators/projectStructure
+    
 The above command will create some folder and files like:
 
     .

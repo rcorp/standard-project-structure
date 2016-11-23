@@ -44,14 +44,11 @@ Good bug reports are extremely helpful, so thanks!
 
 Guidelines for bug reports:
 
-
 1. **Use the GitHub issue search** &mdash; check if the issue has already been
    reported.
 
 2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
    latest `master` or development branch in the repository.
-
-
 
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
@@ -83,55 +80,8 @@ Please adhere to the [coding guidelines](#code-guidelines) used throughout the
 project (indentation, accurate comments, etc.) and any other requirements
 (such as test coverage).
 
-Adhering to the following process is the best way to get your work
-included in the project:
-
-1. [Fork](https://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
-
-   ```bash
-   # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/standard-project-structure.git
-   # Navigate to the newly cloned directory
-   cd standard-project-structure
-   # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/rcorp/standard-project-structure.gitg
-   ```
-
-2. If you cloned a while ago, get the latest changes from upstream:
-
-   ```bash
-   git checkout master
-   git pull upstream master
-   ```
-
-3. Create a new topic branch (off the main project development branch) to
-   contain your feature, change, or fix:
-
-   ```bash
-   git checkout -b <topic-branch-name>
-   ```
-
-4. Commit your changes in logical chunks. Please adhere to these [git commitg
-   message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your code is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
-   feature to tidy up your commits before making them public.
-
-5. Locally merge (or rebase) the upstream development branch into your topic branch:
-
-   ```bash
-   git pull [--rebase] upstream master
-   ```
-
-6. Push your topic branch up to your fork:
-
-   ```bash
-   git push origin <topic-branch-name>
-   ```
-
-7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch.
+Adhering to the process is the best way to get your work included in the project. 
+Firstly [Fork](https://help.github.com/articles/fork-a-repo/) a project and after that work and [create pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
 ## Code guidelines
 
