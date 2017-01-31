@@ -7,7 +7,7 @@ module.exports = {
       keepAlive: true,
     },
     files: {
-      'dist/bundle.js': 'main.js',
+      'dist/bundle.js': '<%= fileName %>',
     },
   },
 };
