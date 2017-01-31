@@ -30,7 +30,7 @@ module.exports = yeoman.Base.extend({
     // Read a package.json if it exists or create it
     const packageJSON = this.fs.readJSON(this.destinationPath('package.json'), {});
 
-    // Read a aliases.js if it exists or create it
+    // Read a aliases.js and shell.js if it exists or create it
     if (!this.fs.exists(this.destinationPath('./grunt/shell.js'))) {
       this.fs.copyTpl(
           this.templatePath('grunt/shell.js'),
@@ -63,6 +63,7 @@ module.exports = yeoman.Base.extend({
       _merge(packageJSON, {
         devDependencies: {
           codeceptjs: '^0.4.13',
+          'grunt-shell': '^2.1.0',
         },
       });
       this.fs.write(this.destinationPath('grunt/aliases.js'), aliasesJS);
