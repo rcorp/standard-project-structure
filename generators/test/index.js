@@ -57,7 +57,7 @@ module.exports = yeoman.Base.extend({
          this.templatePath('mocha.opts'),
          this.destinationPath('./test/mocha.opts'), {}
        );
-      this.fs.copyTpl(
+      this.fs.copy(
           this.templatePath('grunt/mochaTest.js'),
           this.destinationPath('./grunt/mochaTest.js'), {}
         );
