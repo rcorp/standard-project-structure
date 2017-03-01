@@ -31,6 +31,10 @@ module.exports = yeoman.Base.extend({
         this.templatePath('**'),
         this.destinationPath('./'), {}
       );
+      this.fs.copyTpl(
+        this.templatePath('.gitignore'),
+        this.destinationPath('./.gitignore'), {}
+      );
     }
   },
 });
