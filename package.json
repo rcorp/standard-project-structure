@@ -1,6 +1,6 @@
 {
   "name": "standard-project-structure",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open Standard for Programming Project Structures",
   "main": "Gruntfile.js",
   "directories": {
