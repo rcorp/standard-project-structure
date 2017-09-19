@@ -15,7 +15,7 @@ module.exports = yeoman.Base.extend({
       return this.prompt([{
         type: 'checkbox',
         name: 'selectedTestFramework',
-        message: 'Which Framework do you use?',
+        message: 'Which Framework for Functional Testing do you use?',
         choices: ['CodeCept'],
         default: ['CodeCept'],
         when: () => !self.config.get('selectedTestFramework'),
